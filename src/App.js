@@ -8,7 +8,7 @@ function App() {
       className="App"
       style={{
         minHeight: "450px",
-        minWidth: "400px",
+        minWidth: "300px",
         backgroundColor: "grey",
       }}
     >
