@@ -1,6 +1,6 @@
 {
   "name": "Quick Calculator",
-  "description": "A quick calculator extension that removes the need to tab out",
+  "description": "A quick standard calculator extension with 3 instances that removes the need to tab out",
   "version": "1.0",
   "manifest_version": 3,
   "action": {
