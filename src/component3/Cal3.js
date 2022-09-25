@@ -138,7 +138,10 @@ function Cal3() {
 
   return (
     <div className="calculator-grid">
-      <div className="output">
+      <div
+        style={{ backgroundColor: "rgba(182, 76, 76, 0.75)" }}
+        className="output"
+      >
         <div className="previous-operand">
           {formatOperand(previousOperand)} {operation}
         </div>

@@ -24,7 +24,7 @@
 
 .output {
   grid-column: 1 / -1;
-  background-color: rgba(5, 14, 50, 0.75);
+  background-color: rgba(11, 53, 223, 0.75);
   display: flex;
   flex-direction: column;
   align-items: flex-end;
