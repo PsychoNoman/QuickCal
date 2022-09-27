@@ -22,39 +22,12 @@ function App() {
         <TabPanels>
           <TabPanel>
             <Cal2 />
-            <p
-              style={{
-                fontWeight: "bold",
-                marginLeft: "3.75rem",
-                padding: "2px",
-              }}
-            >
-              Calculator One
-            </p>
           </TabPanel>
           <TabPanel>
             <Cal1 />
-            <p
-              style={{
-                fontWeight: "bold",
-                marginLeft: "3.75rem",
-                padding: "2px",
-              }}
-            >
-              Calculator Two
-            </p>
           </TabPanel>
           <TabPanel>
             <Cal3 />
-            <p
-              style={{
-                fontWeight: "bold",
-                marginLeft: "3.5rem",
-                padding: "2px",
-              }}
-            >
-              Calculator Three
-            </p>
           </TabPanel>
         </TabPanels>
       </Tabs>
