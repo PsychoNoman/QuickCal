@@ -11,6 +11,8 @@ export const ACTIONS = {
   EVALUATE: "evaluate",
 };
 
+let calTwoValue = localStorage.getItem("cal2");
+
 function reducer(state, { type, payload }) {
   switch (type) {
     case ACTIONS.ADD_DIGIT:
@@ -60,7 +62,7 @@ function reducer(state, { type, payload }) {
         currentOperand: null,
       };
     case ACTIONS.CLEAR:
-      return {};
+      return { currentOperand: "0" };
     case ACTIONS.DELETE_DIGIT:
       if (state.overwrite) {
         return {
@@ -133,8 +135,9 @@ function formatOperand(operand) {
 function Cal2() {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
-    {}
+    { currentOperand: calTwoValue }
   );
+  localStorage.setItem("cal2", currentOperand);
 
   return (
     <div className="calculator-grid">

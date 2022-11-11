@@ -10,6 +10,7 @@ export const ACTIONS = {
   DELETE_DIGIT: "delete-digit",
   EVALUATE: "evaluate",
 };
+let calThreeValue = localStorage.getItem("cal3");
 
 function reducer(state, { type, payload }) {
   switch (type) {
@@ -60,7 +61,7 @@ function reducer(state, { type, payload }) {
         currentOperand: null,
       };
     case ACTIONS.CLEAR:
-      return {};
+      return { currentOperand: "0" };
     case ACTIONS.DELETE_DIGIT:
       if (state.overwrite) {
         return {
@@ -133,8 +134,9 @@ function formatOperand(operand) {
 function Cal3() {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
-    {}
+    { currentOperand: calThreeValue }
   );
+  localStorage.setItem("cal3", currentOperand);
 
   return (
     <div className="calculator-grid">

@@ -2,7 +2,7 @@
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(4, 4rem);
-  grid-template-rows: minmax(6rem, auto) repeat(4, 3rem);
+  grid-template-rows: minmax(6rem, auto) repeat(5, 3rem);
 }
 
 .calculator-grid > button {

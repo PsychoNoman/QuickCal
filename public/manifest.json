@@ -1,13 +1,11 @@
 {
   "name": "Quick Calculator",
   "description": "A quick standard calculator extension with 3 instances that removes the need to tab out",
-  "version": "1.0",
+  "version": "1.3",
   "manifest_version": 3,
   "action": {
     "default_title": "Quick Calculator",
     "default_popup": "index.html",
-    "default_icon": {
-      "16": "favicon.ico"
-    }
+    "default_icon": "calculator-134.png"
   }
 }

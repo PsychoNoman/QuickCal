@@ -5,11 +5,12 @@ import "./styles1.css";
 
 export const ACTIONS = {
   ADD_DIGIT: "add-digit",
-  CHOOSE_OPERATION: "choose-opefration",
+  CHOOSE_OPERATION: "choose-operation",
   CLEAR: "clear",
   DELETE_DIGIT: "delete-digit",
   EVALUATE: "evaluate",
 };
+let calOneValue = localStorage.getItem("cal1");
 
 function reducer(state, { type, payload }) {
   switch (type) {
@@ -60,7 +61,7 @@ function reducer(state, { type, payload }) {
         currentOperand: null,
       };
     case ACTIONS.CLEAR:
-      return {};
+      return { currentOperand: "0" };
     case ACTIONS.DELETE_DIGIT:
       if (state.overwrite) {
         return {
@@ -116,6 +117,7 @@ function evaluate({ currentOperand, previousOperand, operation }) {
       computation = prev / current;
       break;
   }
+  localStorage.getItem("cal1");
 
   return computation.toString();
 }
@@ -133,9 +135,9 @@ function formatOperand(operand) {
 function Cal1() {
   const [{ currentOperand, previousOperand, operation }, dispatch] = useReducer(
     reducer,
-    {}
+    { currentOperand: calOneValue }
   );
-
+  localStorage.setItem("cal1", currentOperand);
   return (
     <div className="calculator-grid">
       <div
